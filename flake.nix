@@ -43,6 +43,6 @@
         };
       in
       {
-        devShells.default = pkgs.mkShell { packages = [ juliaFhsEnv ]; };
+        devShells.default = pkgs.mkShell { packages = [ juliaFhsEnv ]; shellHook="[[ -z $JULIA_DEPOT_PATH ]] || julia-fhs-cuda-plotting-env";};
       });
 }
