@@ -43,6 +43,6 @@
         };
       in
       {
-        devShells.default = juliaFhsEnv.env;
+        devShells.default = pkgs.mkShell { packages = [ juliaFhsEnv ]; };
       });
 }
